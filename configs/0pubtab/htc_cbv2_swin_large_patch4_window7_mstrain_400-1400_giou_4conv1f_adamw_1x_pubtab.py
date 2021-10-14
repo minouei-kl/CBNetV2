@@ -370,5 +370,5 @@ resume_from = None
 workflow = [('train', 1)]
 samples_per_gpu = 1
 fp16 = None
-work_dir = '/netscratch/minouei/versicherung/work_dirs/htc_cbv2_swin_1x_coco'
+work_dir = '/netscratch/minouei/pubtabnet/work_dirs/htc_cbv2_swin_1x_coco'
 gpu_ids = range(0, 1)
