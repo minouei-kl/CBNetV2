@@ -268,7 +268,7 @@ data = dict(
                 with_seg=True),
             dict(
                 type='Resize',
-                img_scale=[(512, 512), (800, 600)],
+                img_scale=[(512, 512)],
                 multiscale_mode='range',
                 keep_ratio=True),
             dict(type='RandomFlip', flip_ratio=0.2),
