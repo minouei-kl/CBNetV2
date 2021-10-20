@@ -369,6 +369,6 @@ load_from = None
 resume_from = None
 workflow = [('train', 1)]
 samples_per_gpu = 1
-fp16 = None
+fp16 = True
 work_dir = '/netscratch/minouei/pubtabnet/work_dirs/htc_cbv2_swin_1x_coco'
 gpu_ids = range(0, 1)
