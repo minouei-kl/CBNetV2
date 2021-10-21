@@ -256,9 +256,9 @@ data = dict(
     train=dict(
         type='CocoDataset',
         classes=('cell',),
-        ann_file=data_root+'val.json',
-        img_prefix='/ds-av/public_datasets/pubtabnet/raw/val',
-        seg_prefix=data_root+'valmaps',
+        ann_file=data_root+'train.json',
+        img_prefix='/ds-av/public_datasets/pubtabnet/raw/train',
+        seg_prefix=data_root+'trainmaps',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(
