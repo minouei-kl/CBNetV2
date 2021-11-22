@@ -76,6 +76,12 @@ class CocoDataset(CustomDataset):
         img_id = self.data_infos[idx]['id']
         ann_ids = self.coco.get_ann_ids(img_ids=[img_id])
         ann_info = self.coco.load_anns(ann_ids)
+        for ann in ann_info:
+            x1, y1, ww, hh = ann['bbox']
+            x2, y2 = x1 + ww, y1 + hh
+            seg = [[x1,y1,x1,(y1 + y2), (x1 + x2), (y1 + y2), (x1 + x2), y1]]
+            ann['segmentation'] = seg
+
         return self._parse_ann_info(self.data_infos[idx], ann_info)
 
     def get_cat_ids(self, idx):
